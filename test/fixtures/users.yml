@@ -1,0 +1,11 @@
+one:
+  id: 668453117
+  email: "user1@example.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password123') %>
+  active: true
+
+two:
+  id: 668453118
+  email: "user2@example.com"
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password456') %>
+  active: true

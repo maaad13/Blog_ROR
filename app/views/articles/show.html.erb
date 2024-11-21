@@ -1,0 +1,18 @@
+
+<h1><%= @article.tittle %></h1>
+<p><%= @article.body %></p>
+
+<ul>
+  <% if can? :edit, @article %>
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+  <%end%>
+  <%if can? :destroy, @article %>
+  <li><%= link_to "Delete", article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></li>
+  <%end%>
+</ul>
+
+<h1>Comments</h1>
+<%= render @article.comments %>
+
+<h1>Add a Comment:</h1>
+<%= render "comments/form", article: @article %>

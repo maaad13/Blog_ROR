@@ -1,0 +1,11 @@
+one:
+  tittle: MyString
+  body: MyText
+  status: public
+  user_id: 668453117 
+
+two:
+  tittle: MyString
+  body: MyText
+  status: public
+  user_id: 668453117 
